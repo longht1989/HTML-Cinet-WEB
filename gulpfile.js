@@ -15,7 +15,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 //define paths of folder, project name
 var paths = {
-    project_name: "vanhoc",
+    project_name: "cinet",
     js_dev: './source/js',
     js: './build/Jscripts',
     scss_dev: './source/scss',
@@ -38,9 +38,9 @@ gulp.task('scripts', function() {
             paths.js_dev + '/vendor/modernizr.js',
             paths.js_dev + '/vendor/jquery.min.js',
             paths.js_dev + '/vendor/jquery-migrate.js',
-            paths.js_dev + '/vendor/bootstrap.min.js'
+            paths.js_dev + '/vendor/bootstrap.min.js',
+            paths.js_dev + '/vendor/jquery.bxslider.js'
             // paths.js_dev + '/vendor/jquery.matchHeight-min.js',
-            // paths.js_dev + '/vendor/jquery.bxslider.js',
             // paths.js_dev + '/vendor/jquery.scrollbar.min.js'
             // end import plugin
         ])

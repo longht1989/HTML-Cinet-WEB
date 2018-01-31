@@ -9,7 +9,7 @@
         position: relative;
         text-align: center;
         img {
-            @include transition(all, 0.2, linear);
+            @include transition(all, 0.3, linear);
             &::after {
                 @include transition(all, 0.4, ease);
             }
@@ -42,7 +42,7 @@
     &__title {
         @include font-size(14, 19);
         font-weight: bold;
-        + .story__summary {
+        +.story__summary {
             margin-top: 7px;
         }
     }
@@ -58,6 +58,11 @@
         .story__title {
             @include font-size(22, 28);
         }
+        &:hover {
+            img {
+                transform: scale(1);
+            }
+        }
     }
     &--featured {
         padding-bottom: 12px;
@@ -67,6 +72,11 @@
             height: 110px;
             float: left;
             margin: 0 10px 0 0;
+        }
+        &:hover {
+            img {
+                transform: scale(1);
+            }
         }
     }
     &--bullet {
@@ -94,12 +104,12 @@
             float: left;
             margin: 0 10px 0 0;
         }
-        + .story--bullet {
+        +.story--bullet {
             padding-top: 10px;
             border-top: 1px solid #ddd;
         }
         .category__listing & {
-            & ~ .story {
+            &~.story {
                 padding-top: 10px;
                 border-top: 1px solid #ddd;
             }
@@ -179,9 +189,7 @@
     }
 }
 
-
-/* poetic */
-
+// poetic
 .poetic {
     &__title {
         @include font-size(18, 22);
@@ -195,5 +203,42 @@
     }
     &__content {
         @include font-size(14, 25);
+    }
+}
+
+// event
+.event {
+    &-listing {
+        li {
+            @include clearfix;
+            &+li {
+                margin-top: 15px;
+            }
+        }
+    }
+    &__meta {
+        float: left;
+        margin-right: 10px;
+        text-align: center;
+    }
+    &__day {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        color: white;
+        font-size: 16px;
+        font-weight: normal;
+        background: linear-gradient(to top right, $brand-primary, $brand-success);
+        text-align: center;
+        margin: 0 auto 5px;
+    }
+    &__month {
+        font-style: italic;
+        font-size: 12px;
+    }
+    &__title {
+        font-weight: bold;
+        overflow: hidden;
     }
 }
