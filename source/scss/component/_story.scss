@@ -53,6 +53,19 @@
         color: #999;
         margin-top: 7px;
         margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    &__subcate {
+        font-size: 12px;
+        padding: 2px 6px;
+        background: #f0f0f0;
+        border-radius: 3px;
+        color: #555;
+        &:hover {
+            background: $brand-primary;
+            color: white;
+        }
     }
     &--highlight {
         .story__title {
