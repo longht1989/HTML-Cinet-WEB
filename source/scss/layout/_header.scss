@@ -112,7 +112,7 @@
         }
     }
     &__content {
-        // min-height: 202px; // overflow: hidden;
+        min-height: 140px;
         .logo {
             width: 180px;
             position: absolute;
@@ -207,6 +207,9 @@
                 background: #f0f0f0;
                 color: $brand-primary;
             }
+            @include breakpoint(1024px, 1366px) {
+                padding: 0 7px;
+            }
         }
         &:hover {
             .navigator__child {
@@ -242,7 +245,6 @@
         &.is-full {
             width: 700px;
             background: #f0f0f0;
-
             >li {
                 width: 19.5%;
                 display: inline-block;
