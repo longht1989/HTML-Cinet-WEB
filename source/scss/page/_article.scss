@@ -462,6 +462,90 @@
             display: block;
             font-size: 14px;
         }
+        .slider {
+            background-color: #333333;
+            padding: 30px;
+            position: relative;
+            * {
+                margin-bottom: 0 !important;
+            }
+            &__caption {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 10px;
+                color: white;
+                background: rgba(0, 0, 0, 0.6);
+            }
+            &__next {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 40px;
+                height: 72px;
+                margin: -36px 0 0 !important;
+                background-image: url(../img/slider_control.png);
+                background-position: -39px 0px;
+                background-repeat: no-repeat;
+                background-size: 80px 72px;
+                z-index: 51;
+                opacity: .6;
+                transition: all 0.2s linear;
+                &:hover {
+                    opacity: 0.9;
+                }
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+            }
+            &__prev {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 40px;
+                height: 72px;
+                margin: -36px 0 0 !important;
+                background-image: url(../img/slider_control.png);
+                background-position: 0px 0px;
+                background-repeat: no-repeat;
+                background-size: 80px 72px;
+                z-index: 51;
+                opacity: .6;
+                transition: all 0.2s linear;
+                &:hover {
+                    opacity: 0.9;
+                }
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+            }
+            .bx {
+                &-pager {
+                    @include clearfix;
+                    &-item {
+                        width: 80px;
+                        float: left;
+                        margin-right: 20px;
+                        margin-bottom: 0;
+                        margin-top: 10px;
+                        &:nth-child(8n) {
+                            margin-right: 0;
+                        }
+                    }
+                    &-link {
+                        opacity: 0.4;
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
     }
     &.article--event {
         .event__date {
