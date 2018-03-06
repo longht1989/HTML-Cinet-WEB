@@ -469,6 +469,13 @@
             * {
                 margin-bottom: 0 !important;
             }
+            &__item {
+                text-align: center;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
             &__caption {
                 position: absolute;
                 left: 0;
@@ -538,7 +545,11 @@
                         }
                     }
                     &-link {
-                        opacity: 0.4;
+                        opacity: 0.3;
+                        transition: all 0.2s linear;
+                        &:hover {
+                            opacity: .7;
+                        }
                         &.active {
                             opacity: 1;
                         }

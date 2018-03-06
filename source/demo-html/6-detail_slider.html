@@ -107,39 +107,56 @@
                                 <li>
                                     <div class="slider__item">
                                         <div class="slider__image">
-                                            <img src="https://source.unsplash.com/random/780x440?sig=0">
+                                            <img src="https://source.unsplash.com/random/780x440?sig=0" data-src="https://source.unsplash.com/random/80x60?sig=0">
                                         </div>
                                         <div class="slider__caption">
                                             <div><a href="#">Lorem ipsum</a> dolor sit amet, consectetur adipisicing elit. Laudantium, fugit.</div>
                                         </div>
                                     </div>
                                 </li>
-                                <li><img src="https://source.unsplash.com/random/780x440?sig=1"></li>
-                                <li><img src="https://source.unsplash.com/random/780x440?sig=2"></li>
                                 <li>
                                     <div class="slider__item">
                                         <div class="slider__image">
-                                            <img src="https://source.unsplash.com/random/780x440?sig=3">
+                                            <img src="https://source.unsplash.com/random/660x370?sig=1" data-src="https://source.unsplash.com/random/80x60?sig=1">
                                         </div>
                                         <div class="slider__caption">
-                                            <div><a href="#">Lorem ipsum</a> dolor sit amet, consectetur adipisicing elit. Laudantium, fugit.</div>
+                                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
                                         </div>
-                                    </div>
                                 </li>
-                                <li><img src="https://source.unsplash.com/random/780x440?sig=4"></li>
-                                <li><img src="https://source.unsplash.com/random/780x440?sig=5"></li>
                                 <li>
                                     <div class="slider__item">
                                         <div class="slider__image">
-                                            <img src="https://source.unsplash.com/random/780x440?sig=0">
+                                            <img src="https://source.unsplash.com/random/660x370?sig=9" data-src="https://source.unsplash.com/random/80x60?sig=2">
+                                        </div>
+                                        <div class="slider__caption">
+                                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                                        </div>
+                                </li>
+                                <li><img src="https://source.unsplash.com/random/780x440?sig=2" data-src="https://source.unsplash.com/random/80x60?sig=3"></li>
+                                <li>
+                                    <div class="slider__item">
+                                        <div class="slider__image">
+                                            <img src="https://source.unsplash.com/random/780x440?sig=3" data-src="https://source.unsplash.com/random/80x60?sig=4">
                                         </div>
                                         <div class="slider__caption">
                                             <div><a href="#">Lorem ipsum</a> dolor sit amet, consectetur adipisicing elit. Laudantium, fugit.</div>
                                         </div>
                                     </div>
                                 </li>
-                                <li><img src="https://source.unsplash.com/random/780x440?sig=6"></li>
-                                <li><img src="https://source.unsplash.com/random/780x440?sig=7"></li>
+                                <li><img src="https://source.unsplash.com/random/780x440?sig=4" data-src="https://source.unsplash.com/random/80x60?sig=5"></li>
+                                <li><img src="https://source.unsplash.com/random/780x440?sig=5" data-src="https://source.unsplash.com/random/80x60?sig=6"></li>
+                                <li>
+                                    <div class="slider__item">
+                                        <div class="slider__image">
+                                            <img src="https://source.unsplash.com/random/780x440?sig=0" data-src="https://source.unsplash.com/random/80x60?sig=0">
+                                        </div>
+                                        <div class="slider__caption">
+                                            <div><a href="#">Lorem ipsum</a> dolor sit amet, consectetur adipisicing elit. Laudantium, fugit.</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><img src="https://source.unsplash.com/random/780x440?sig=6" data-src="https://source.unsplash.com/random/80x60?sig=7"></li>
+                                <li><img src="https://source.unsplash.com/random/780x440?sig=7" data-src="https://source.unsplash.com/random/80x60?sig=8"></li>
                             </ul>
                             <div class="slider__control">
                                 <div class="slider__prev"></div>
@@ -155,96 +172,96 @@
                                     prevSelector: '.slider__prev',
                                     buildPager: function(slideIndex) {
                                         var sliderimage = $('.bxslider li img');
-                                        return   '<img src="'+ sliderimage[slideIndex].src+ '">';
+                                        return '<img src="' + sliderimage[slideIndex].getAttribute('data-src') + '">';
                                     }
                                 });
                             });
                             </script>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- end article main content  -->
-                <!-- article comment box -->
-                <div class="zone article-comments">
-                    <header>
-                        <h3 class="zone-title"><span class="fa fa-comments"></span> Độc giả bình luận</h3>
-                    </header>
-                    <div class="zone-content">
-                        <div class="box-input" id="commentbox">
-                            <div class="action">
-                                <div class="input-group">
-                                    <textarea class="form-control" placeholder="Ý kiến của bạn" id="cmContent" rows="5"></textarea>
-                                </div>
-                                <p class="note">* Vui lòng nhập bình luận tiếng Việt có dấu</p>
-                                <div class="pull-right">
-                                    <button class="btn btn-default" id="btnreset">Nhập lại</button>
-                                    <button class="btn btn-primary" id="btnComment" data-toggle="modal" data-target="#user-info">Gửi</button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="user-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                    <h4 class="modal-title" id="myModalLabel">Thông tin người gửi</h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="input-group">
-                                                        <input class="name form-control" type="text" placeholder="Họ tên" id="cmFullName">
-                                                        <input class="email form-control" type="email" placeholder="Email" id="cmEmail">
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox"> Lưu thông tin
-                                                            </label>
+                    <!-- end article main content  -->
+                    <!-- article comment box -->
+                    <div class="zone article-comments">
+                        <header>
+                            <h3 class="zone-title"><span class="fa fa-comments"></span> Độc giả bình luận</h3>
+                        </header>
+                        <div class="zone-content">
+                            <div class="box-input" id="commentbox">
+                                <div class="action">
+                                    <div class="input-group">
+                                        <textarea class="form-control" placeholder="Ý kiến của bạn" id="cmContent" rows="5"></textarea>
+                                    </div>
+                                    <p class="note">* Vui lòng nhập bình luận tiếng Việt có dấu</p>
+                                    <div class="pull-right">
+                                        <button class="btn btn-default" id="btnreset">Nhập lại</button>
+                                        <button class="btn btn-primary" id="btnComment" data-toggle="modal" data-target="#user-info">Gửi</button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="user-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel">Thông tin người gửi</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="input-group">
+                                                            <input class="name form-control" type="text" placeholder="Họ tên" id="cmFullName">
+                                                            <input class="email form-control" type="email" placeholder="Email" id="cmEmail">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox"> Lưu thông tin
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Gửi</button>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Gửi</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="box-user-comm">
-                            <div id="commentlist" class="commentlist">
-                                <div class="box">
-                                    <div class="name">Vinh Kiet
-                                        <time datetime="2011-01-12">January 12th, 2011</time>
+                            <div class="box-user-comm">
+                                <div id="commentlist" class="commentlist">
+                                    <div class="box">
+                                        <div class="name">Vinh Kiet
+                                            <time datetime="2011-01-12">January 12th, 2011</time>
+                                        </div>
+                                        <div class="text ">Ở nước Việt mà đăng những tin tức kiểu này thì giấy báo đâu cho thấu hở trời? <a href="#" class="view-more-plus">Xem thêm</a>
+                                        </div>
+                                        <div class="text-reply">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque vero reiciendis ipsum laborum minima ad, voluptate ducimus eos ea officia.
+                                        </div>
                                     </div>
-                                    <div class="text ">Ở nước Việt mà đăng những tin tức kiểu này thì giấy báo đâu cho thấu hở trời? <a href="#" class="view-more-plus">Xem thêm</a>
+                                    <div class="box">
+                                        <div class="name">Nguyễn Nhân
+                                            <time datetime="2011-01-12">January 12th, 2011</time>
+                                        </div>
+                                        <div class="text ">Trộm cướp diễn ra như cơm bũa ! Rồi suốt ngày nghe bàn thành lập đội săn bắt cướp này nọ để rình và bắt,chờ chuyện xảy ra mới hành động ah?, thế cơ quan chính quyền CA để làm gì? Tại sao không tuyển dụng nhân lực CA-CS số lượng nhiều hơn và áp dụng hình thức là mỗi khu phố đều có CA-CS mang quân dụng tuần tra 24/24 như các nước phát triển điển hình ở Âu-Mỹ? Như thế thì thằng nào dám lộng hành ! <a href="#" class="view-more-plus">Xem thêm</a></div>
+                                        <div class="text-reply">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, inventore sint expedita omnis ad iusto quam quos temporibus laboriosam necessitatibus.
+                                        </div>
                                     </div>
-                                    <div class="text-reply">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque vero reiciendis ipsum laborum minima ad, voluptate ducimus eos ea officia.
+                                    <div class="box">
+                                        <div class="name">duong minh Ngoc
+                                            <time datetime="2011-01-12">January 12th, 2011</time>
+                                        </div>
+                                        <div class="text ">Cần cải tổ bộ máy cán bộ từ huyện trở lên, cùng là con người mà sao phân biệt quá. HĐND tỉnh, huyện thì chế độ ăn 150-200 ngàn, quần áo cấp thì 1,5-2 triệu đồng, HĐND xã thì tiền ăn 70-100 ngàn, quần áo trong nhiệm kỳ thì giá 1 triệu đồng, thử xem con người với con người như thế đã bình đẳng chưa? Đây có phải là lương cơ bản đâu mà phân biệt vậy? <a href="#" class="view-more-plus">Xem thêm</a></div>
+                                        <div class="text-reply">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolore quis sint sequi harum beatae quas perspiciatis doloribus, excepturi ducimus.
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="box">
-                                    <div class="name">Nguyễn Nhân
-                                        <time datetime="2011-01-12">January 12th, 2011</time>
-                                    </div>
-                                    <div class="text ">Trộm cướp diễn ra như cơm bũa ! Rồi suốt ngày nghe bàn thành lập đội săn bắt cướp này nọ để rình và bắt,chờ chuyện xảy ra mới hành động ah?, thế cơ quan chính quyền CA để làm gì? Tại sao không tuyển dụng nhân lực CA-CS số lượng nhiều hơn và áp dụng hình thức là mỗi khu phố đều có CA-CS mang quân dụng tuần tra 24/24 như các nước phát triển điển hình ở Âu-Mỹ? Như thế thì thằng nào dám lộng hành ! <a href="#" class="view-more-plus">Xem thêm</a></div>
-                                    <div class="text-reply">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, inventore sint expedita omnis ad iusto quam quos temporibus laboriosam necessitatibus.
-                                    </div>
-                                </div>
-                                <div class="box">
-                                    <div class="name">duong minh Ngoc
-                                        <time datetime="2011-01-12">January 12th, 2011</time>
-                                    </div>
-                                    <div class="text ">Cần cải tổ bộ máy cán bộ từ huyện trở lên, cùng là con người mà sao phân biệt quá. HĐND tỉnh, huyện thì chế độ ăn 150-200 ngàn, quần áo cấp thì 1,5-2 triệu đồng, HĐND xã thì tiền ăn 70-100 ngàn, quần áo trong nhiệm kỳ thì giá 1 triệu đồng, thử xem con người với con người như thế đã bình đẳng chưa? Đây có phải là lương cơ bản đâu mà phân biệt vậy? <a href="#" class="view-more-plus">Xem thêm</a></div>
-                                    <div class="text-reply">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolore quis sint sequi harum beatae quas perspiciatis doloribus, excepturi ducimus.
-                                    </div>
-                                </div>
+                                <p class="view-more text-center">
+                                    <a href="#" class="btn btn-default btn-sm">Xem thêm</a>
+                                </p>
                             </div>
-                            <p class="view-more text-center">
-                                <a href="#" class="btn btn-default btn-sm">Xem thêm</a>
-                            </p>
                         </div>
                     </div>
-                </div>
             </article>
             <!-- normal zone -->
             <section class="zone">
@@ -297,191 +314,191 @@
                     </article>
                 </div>
             </section>
-        </div>
-        <!-- sidebar col -->
-        <div class="sidebar-col">
-            <!-- special zone -->
-            <section class="zone zone--poetic">
-                <h3 class="zone__title"><a href="2-category.html" title="">Thơ mỗi ngày</a></h3>
-                <div class="zone__content">
-                    <article class="poetic">
-                        <h2 class="poetic__title"><a href="3-detail.html">Khói đốt đồng</a></h2>
-                        <p class="poetic__author">- Đỗ Xuân Thu -</p>
-                        <div class="poetic__content">
-                            <p>Gom mùa, dọn vụ, đốt đồng</p>
-                            <p>Rạ rơm bén lửa thơm nồng khói bay</p>
-                            <p>Vãi tro trả lại đất này</p>
-                            <p>Còn gì gửi khói gió bay trả trời…</p>
-                            <p>Cuốc cầy, cấy hái ngàn đời</p>
-                            <p>Tháng năm lại đến tháng mười quẩn quanh</p>
-                            <p>Lưỡi cày lóc đất mùa xanh</p>
-                            <p>Mồ hôi đẫm cả ngày hanh cùng bùn</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <!-- ads -->
-            <div class="qc">
-                <a href="#"><img src="fig-image/ads300x250.jpg" alt=""></a>
             </div>
-            <!-- normal zone -->
-            <section class="zone">
-                <h3 class="zone__title"><a href="2-category.html" title="">Tin tức</a></h3>
-                <div class="zone__content">
-                    <article class="story story--horizontal">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/4x3.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                    <article class="story story--bullet">
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                    <article class="story story--bullet">
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                    <article class="story story--bullet">
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                    <article class="story story--bullet">
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
+            <!-- sidebar col -->
+            <div class="sidebar-col">
+                <!-- special zone -->
+                <section class="zone zone--poetic">
+                    <h3 class="zone__title"><a href="2-category.html" title="">Thơ mỗi ngày</a></h3>
+                    <div class="zone__content">
+                        <article class="poetic">
+                            <h2 class="poetic__title"><a href="3-detail.html">Khói đốt đồng</a></h2>
+                            <p class="poetic__author">- Đỗ Xuân Thu -</p>
+                            <div class="poetic__content">
+                                <p>Gom mùa, dọn vụ, đốt đồng</p>
+                                <p>Rạ rơm bén lửa thơm nồng khói bay</p>
+                                <p>Vãi tro trả lại đất này</p>
+                                <p>Còn gì gửi khói gió bay trả trời…</p>
+                                <p>Cuốc cầy, cấy hái ngàn đời</p>
+                                <p>Tháng năm lại đến tháng mười quẩn quanh</p>
+                                <p>Lưỡi cày lóc đất mùa xanh</p>
+                                <p>Mồ hôi đẫm cả ngày hanh cùng bùn</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <!-- ads -->
+                <div class="qc">
+                    <a href="#"><img src="fig-image/ads300x250.jpg" alt=""></a>
                 </div>
-            </section>
-            <!-- ads box -->
-            <div class="qc">
-                <a href="#"><img src="fig-image/ads300x250.jpg" alt=""></a>
-            </div>
-            <!-- review book zone-->
-            <section class="zone">
-                <h3 class="zone__title"><a href="2-category.html" title="">Giới thiệu sách</a></h3>
-                <div class="zone__content">
-                    <article class="story story--portrait">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                        <div class="story__summary">(Tổ Quốc)- Nữ thi sĩ Xuân Quỳnh vừa chính thức được Chủ tịch nước ký Quyết định tặng...</div>
-                    </article>
-                    <article class="story story--portrait">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                        <div class="story__summary">(Tổ Quốc)- Nữ thi sĩ Xuân Quỳnh vừa chính thức được Chủ tịch nước ký Quyết định tặng...</div>
-                    </article>
-                    <article class="story story--portrait">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                        <div class="story__summary">(Tổ Quốc)- Nữ thi sĩ Xuân Quỳnh vừa chính thức được Chủ tịch nước ký Quyết định tặng...</div>
-                    </article>
+                <!-- normal zone -->
+                <section class="zone">
+                    <h3 class="zone__title"><a href="2-category.html" title="">Tin tức</a></h3>
+                    <div class="zone__content">
+                        <article class="story story--horizontal">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/4x3.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                        <article class="story story--bullet">
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                        <article class="story story--bullet">
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                        <article class="story story--bullet">
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                        <article class="story story--bullet">
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                    </div>
+                </section>
+                <!-- ads box -->
+                <div class="qc">
+                    <a href="#"><img src="fig-image/ads300x250.jpg" alt=""></a>
                 </div>
-            </section>
-            <!-- ads box -->
-            <div class="qc">
-                <a href="#"><img src="fig-image/ads300x250.jpg" alt=""></a>
-            </div>
-            <!-- linked sites -->
-            <section class="zone zone--grey">
-                <h3 class="zone__title"><a href="2-category.html" title="">Báo điện tử Tổ quốc</a></h3>
-                <div class="zone__content">
-                    <article class="story story--horizontal">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                    <article class="story story--horizontal">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                    <article class="story story--horizontal">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
+                <!-- review book zone-->
+                <section class="zone">
+                    <h3 class="zone__title"><a href="2-category.html" title="">Giới thiệu sách</a></h3>
+                    <div class="zone__content">
+                        <article class="story story--portrait">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                            <div class="story__summary">(Tổ Quốc)- Nữ thi sĩ Xuân Quỳnh vừa chính thức được Chủ tịch nước ký Quyết định tặng...</div>
+                        </article>
+                        <article class="story story--portrait">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                            <div class="story__summary">(Tổ Quốc)- Nữ thi sĩ Xuân Quỳnh vừa chính thức được Chủ tịch nước ký Quyết định tặng...</div>
+                        </article>
+                        <article class="story story--portrait">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                            <div class="story__summary">(Tổ Quốc)- Nữ thi sĩ Xuân Quỳnh vừa chính thức được Chủ tịch nước ký Quyết định tặng...</div>
+                        </article>
+                    </div>
+                </section>
+                <!-- ads box -->
+                <div class="qc">
+                    <a href="#"><img src="fig-image/ads300x250.jpg" alt=""></a>
                 </div>
-            </section>
-            <!-- linked sites -->
-            <section class="zone zone--grey">
-                <h3 class="zone__title"><a href="2-category.html" title="">Báo điện tử Tổ quốc - tiếng Anh</a></h3>
-                <div class="zone__content">
-                    <article class="story story--horizontal">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                    <article class="story story--horizontal">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                    <article class="story story--horizontal">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                </div>
-            </section>
-            <!-- linked sites -->
-            <section class="zone zone--grey">
-                <h3 class="zone__title"><a href="2-category.html" title="">Mạng thông tin văn hóa (CINET)</a></h3>
-                <div class="zone__content">
-                    <article class="story story--horizontal">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                    <article class="story story--horizontal">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                    <article class="story story--horizontal">
-                        <figure class="story__thumb">
-                            <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
-                        </figure>
-                        <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
-                    </article>
-                </div>
-            </section>
-            <!-- ads box -->
-            <div class="qc">
-                <a href="#"><img src="fig-image/ads300x250.jpg" alt=""></a>
-            </div>
-        </div>
-    </div>
-    <!-- end site content -->
-    <!-- site footer -->
-    <footer id="site-footer">
-        <div class="site-wrap">
-            <div class="footer__info">
-                <div class="footer__col">
-                    <p>Bản quyền thuộc Báo điện tử Tổ Quốc - Bộ Văn hoá, Thể thao và Du lịch.</p>
-                    <p>Chuyên trang Văn học Quê nhà - Báo Điện tử Tổ Quốc</p>
-                    <p>All rights reserved</p>
-                </div>
-                <div class="footer__col">
-                    <p>Địa chỉ: Số 20 ngõ 2 Hoa Lư - Vân Hồ - Hai Bà Trưng - Hà Nội</p>
-                    <p>Điện thoại: <a href="tel:0439742813">84-04-3.9742813</a> - <a href="tel:0439742817">84-04-3.9742817</a></p>
-                    <p>Email: <a href="mailto:vanhocquenha@toquoc.gov.vn">vanhocquenha@toquoc.gov.vn</a></p>
+                <!-- linked sites -->
+                <section class="zone zone--grey">
+                    <h3 class="zone__title"><a href="2-category.html" title="">Báo điện tử Tổ quốc</a></h3>
+                    <div class="zone__content">
+                        <article class="story story--horizontal">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                        <article class="story story--horizontal">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                        <article class="story story--horizontal">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                    </div>
+                </section>
+                <!-- linked sites -->
+                <section class="zone zone--grey">
+                    <h3 class="zone__title"><a href="2-category.html" title="">Báo điện tử Tổ quốc - tiếng Anh</a></h3>
+                    <div class="zone__content">
+                        <article class="story story--horizontal">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                        <article class="story story--horizontal">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                        <article class="story story--horizontal">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                    </div>
+                </section>
+                <!-- linked sites -->
+                <section class="zone zone--grey">
+                    <h3 class="zone__title"><a href="2-category.html" title="">Mạng thông tin văn hóa (CINET)</a></h3>
+                    <div class="zone__content">
+                        <article class="story story--horizontal">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                        <article class="story story--horizontal">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                        <article class="story story--horizontal">
+                            <figure class="story__thumb">
+                                <a href="3-detail.html"><img class="img-responsive" src="fig-image/3x4.png" alt=""></a>
+                            </figure>
+                            <h2 class="story__title"><a href="3-detail.html">Sự thật về chàng rể và tiểu thư của đại gia Ninh Bình</a></h2>
+                        </article>
+                    </div>
+                </section>
+                <!-- ads box -->
+                <div class="qc">
+                    <a href="#"><img src="fig-image/ads300x250.jpg" alt=""></a>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- JS Global Customise -->
-    <script src="../Jscripts/custom.js"></script>
-    <!--[if lt IE 9]>
+        <!-- end site content -->
+        <!-- site footer -->
+        <footer id="site-footer">
+            <div class="site-wrap">
+                <div class="footer__info">
+                    <div class="footer__col">
+                        <p>Bản quyền thuộc Báo điện tử Tổ Quốc - Bộ Văn hoá, Thể thao và Du lịch.</p>
+                        <p>Chuyên trang Văn học Quê nhà - Báo Điện tử Tổ Quốc</p>
+                        <p>All rights reserved</p>
+                    </div>
+                    <div class="footer__col">
+                        <p>Địa chỉ: Số 20 ngõ 2 Hoa Lư - Vân Hồ - Hai Bà Trưng - Hà Nội</p>
+                        <p>Điện thoại: <a href="tel:0439742813">84-04-3.9742813</a> - <a href="tel:0439742817">84-04-3.9742817</a></p>
+                        <p>Email: <a href="mailto:vanhocquenha@toquoc.gov.vn">vanhocquenha@toquoc.gov.vn</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- JS Global Customise -->
+        <script src="../Jscripts/custom.js"></script>
+        <!--[if lt IE 9]>
         <script src="Jscripts/vendor/respond.js"></script>
         <script src="Jscripts/vendor/html5shiv.js"></script>
         <script src="Jscripts/vendor/placeholder-IE-fixes.js"></script>
