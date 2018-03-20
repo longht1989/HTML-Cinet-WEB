@@ -214,6 +214,9 @@
         &:hover {
             .navigator__child {
                 left: auto;
+                &.is-full {
+                    left: -200px;
+                }
             }
             .navigator__search {
                 right: 0;
@@ -230,7 +233,7 @@
         position: absolute;
         top: 100%;
         left: -999em;
-        width: 200px;
+        width: 260px;
         z-index: 2;
         @include has-shadow();
         >li {
@@ -243,13 +246,16 @@
             }
         }
         &.is-full {
-            width: 700px;
+            width: 840px;
             background: #f0f0f0;
+            @include clearfix();
             >li {
-                width: 19.5%;
+                width: 16.66%;
                 display: inline-block;
                 vertical-align: top;
                 font-size: 14px;
+                line-height: 35px;
+                float: left;
             }
         }
     }

@@ -120,19 +120,32 @@
     }
 }
 
+.three-cols {
+    margin-right: -10px;
+    margin-left: -10px;
+    @include clearfix;
+    &>* {
+        width: 33.33%;
+        float: left;
+        padding: 0 10px;
+    }
+    &-min {
+        margin-left: -5px;
+        margin-right: -5px;
+        &>* {
+            padding: 0 5px;
+        }
+        .story {
+            .story__title {
+                font-weight: normal;
+                max-height: 5.5em;
+                overflow: hidden;
+            }
+        }
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-/* area style */
-
+// area style
 .area {
     @include clearfix;
     margin-bottom: 20px;
