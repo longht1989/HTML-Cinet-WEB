@@ -107,14 +107,23 @@
                     color: #ddd;
                 }
             }
+            .fa {
+                margin-right: 5px;
+            }
+        }
+        .story--bullet {
+            .story__title {
+                &::before {
+                    background-image: url(../img/bullet-white.png);
+                }
+            }
         }
     }
     .scroll-listing {
         max-height: 250px;
         overflow: auto;
         margin-right: -10px;
-        padding-right: 10px;
-        // background: white;
+        padding-right: 10px; // background: white;
         &::-webkit-scrollbar-track {
             border-radius: 6px;
         }
