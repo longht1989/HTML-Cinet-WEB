@@ -287,7 +287,8 @@
             }
         }
         /* -------------- */
-        .quotes {
+        .quotes,
+        .alert {
             margin: 0 0 10px;
             padding: 10px 10px 10px 40px;
             background: #f0f0f0;
@@ -313,11 +314,13 @@
                 left: 10px;
             }
         }
-        .quotes.pull-left {
+        .quotes.pull-left,
+        .alert.fl {
             margin-right: 20px;
             width: 50%;
         }
-        .quotes.pull-right {
+        .quotes.pull-right,
+        .alert.fr {
             margin-left: 20px;
             width: 50%;
         }
