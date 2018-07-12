@@ -84,8 +84,19 @@
         @include clearfix();
         padding: 0 10px;
         background-color: #f0f0f0;
-        @include font-size(12, 35);
+        font-size: 12px;
+        line-height: 35px;
         z-index: 5;
+        @include breakpoint(xs) {
+            .site-wrap {
+                background-color: #f0f0f0;
+            }
+        }
+        @include breakpoint(sm) {
+            .site-wrap {
+                background-color: #f0f0f0;
+            }
+        }
         time {
             float: left;
         }
@@ -113,6 +124,15 @@
     }
     &__content {
         min-height: 140px;
+        @include breakpoint(xs) {
+            width: 1160px;
+        }
+        @include breakpoint(sm) {
+            width: 1160px;
+        }
+        @include breakpoint(md) {
+            width: initial;
+        }
         .logo {
             width: 220px;
             position: absolute;
@@ -184,6 +204,9 @@
     }
     &__nav {
         background: $brand-primary;
+        .navigator {
+            background: $brand-primary;
+        }
     }
     &__slider {
         img {

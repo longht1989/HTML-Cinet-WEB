@@ -318,11 +318,13 @@
         .alert.fl {
             margin-right: 20px;
             width: 50%;
+            float: left;
         }
         .quotes.pull-right,
         .alert.fr {
             margin-left: 20px;
             width: 50%;
+            float: right;
         }
         /* -------------- */
         .article-poll {

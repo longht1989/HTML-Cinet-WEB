@@ -169,20 +169,20 @@
         }
     }
     .latest-listing & {
-        @include breakpoint(xs) {
-            .story__thumb {
-                width: 120px;
-                float: left;
-                margin: 0 10px 0 0;
-            }
-        }
-        @include breakpoint(768px, 1023px) {
-            .story__thumb {
-                width: 120px;
-                float: left;
-                margin: 0 10px 0 0;
-            }
-        }
+        // @include breakpoint(xs) {
+        //     .story__thumb {
+        //         width: 120px;
+        //         float: left;
+        //         margin: 0 10px 0 0;
+        //     }
+        // }
+        // @include breakpoint(768px, 1023px) {
+        //     .story__thumb {
+        //         width: 120px;
+        //         float: left;
+        //         margin: 0 10px 0 0;
+        //     }
+        // }
     }
     &--video {
         position: relative;
